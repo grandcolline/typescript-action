@@ -1,11 +1,18 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: "static analysis checker"
+description: "static code analysis checker for golang"
+author: "grandcolline"
 inputs:
   milliseconds: # change this
     required: true
     description: 'input description here'
     default: 'default value if applicable'
+  token:
+    description: "github token. this is require when comment is true."
+    default: ""
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  icon: "alert-triangle"
+  color: "yellow"
